@@ -22,6 +22,3 @@ ro.build.product=X6886
 ro.build.device=X6886
 ro.product.device=X6886
 
-# Hardware rendering
-ro.hardware.egl=mali
-ro.hardware.vulkan=mali
