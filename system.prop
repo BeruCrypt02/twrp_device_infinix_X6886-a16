@@ -17,10 +17,6 @@ ro.vendor.mtk_trustonic_tee_support=1
 # Keymaster
 keymaster_ver=4.1
 
-# Hardware
-ro.hardware=mt6789
-ro.board.platform=mt6789
-
 # Build
 ro.build.product=X6886
 ro.build.device=X6886
