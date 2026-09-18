@@ -12,6 +12,7 @@ ro.charger.enable_suspend=1
 
 # USB MTP
 ro.sys.usb.storage.type=mtp
+
 # Gatekeeper (Trustonic)
 ro.hardware.gatekeeper=trustonic
 
