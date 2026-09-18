@@ -28,7 +28,7 @@ device/infinix/X6886
 
 source build/envsetup.sh
 lunch ofox_X6886-bp2a-eng
-mka recoveryimage
+mka vendorbootimage
 ```
 
 Build vars live in `vendorsetup.sh` (never in BoardConfig.mk).
