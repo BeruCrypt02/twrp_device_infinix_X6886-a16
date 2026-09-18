@@ -51,7 +51,7 @@ export OF_ADVANCED_SECURITY=1
 # OF_SKIP_FBE_DECRYPTION=0 is the default, kept explicit so nobody re-adds a skip
 export OF_SKIP_FBE_DECRYPTION=0
 # Always-on in fox_12.1, kept explicit for the record
-export OF_KEEP_DM_VERITY_FORCE_ENCRYPTION=1
+export OF_KEEP_DM_VERITY_FORCED_ENCRYPTION=1
 export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 # fstab carries /metadata: silence metadata mount noise on ROMs without it
 export OF_FBE_METADATA_MOUNT_IGNORE=1
