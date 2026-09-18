@@ -1,61 +1,31 @@
-# system.prop - Infinix Hot 60 Pro Plus (x6886)
-# Transsion (Infinix) - MT6789
-# OrangeFox Recovery - fox_12.1 (R12)
-# vendor_boot (header v4) - Android 16 (XOS 16)
-
-# Platform / Hardware
-ro.mediatek.platform=MT6789
-ro.hardware=mt6789
-ro.board.platform=mt6789
-ro.product.board=mt6789
-
-# Display
-ro.sf.lcd_density=420
-
-# Fstab prefix for postinstall
+# Fstab
 ro.postinstall.fstab.prefix=/system
 
-# USB / MTP / Fastbootd
+# USB MTP
 ro.sys.usb.storage.type=mtp
-persist.sys.usb.config=mtp,adb
-ro.sys.usb.configfs=1
-ro.sys.usb.controller=musb-hdrc
 
-# Crypto / FBE (Trustonic TEE + FBE v2 + inlinecrypt)
-ro.crypto.type=file
-ro.crypto.state=encrypted
+# Crypto - FBE
 ro.crypto.volume.filenames_mode=aes-256-cts
-ro.crypto.volume.contents_mode=aes-256-xts
-ro.crypto.fde_algorithm=aes-256-xts
-ro.crypto.fs_type=f2fs
 
-# Gatekeeper
+# Gatekeeper (Trustonic)
 ro.hardware.gatekeeper=trustonic
 
-# TEE / Trustonic
+# TEE
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_trustonic_tee_support=1
-ro.hardware.keystore=trustonic
 
-# Keymaster 7.0 (ro.vendor.keymaster_version in stock dump; was 4.1 from A15 tree)
-# If decrypt fails on first boot, try 4.1 before anything else
-keymaster_ver=7.0
-ro.hardware.keymaster=7.0
+# Keymaster
+keymaster_ver=4.1
 
-# Recovery specific (vendor_boot)
-ro.twrp.vendor_boot=true
-ro.twrp.boot=1
+# Hardware
+ro.hardware=mt6789
+ro.board.platform=mt6789
 
-# Dynamic partitions / Virtual A/B
-ro.boot.dynamic_partitions=true
-ro.boot.dynamic_partitions_retrofit=false
+# Build
+ro.build.product=X6886
+ro.build.device=X6886
+ro.product.device=X6886
 
-# Other useful props
-ro.build.version.release=16
-ro.secure=0
-ro.adb.secure=0
-ro.debuggable=1
-
-# MTK specific for recovery
-ro.mtk.enable.aee=0
-ro.mtk.vdec.waitkeyframeforplay=1
+# Hardware rendering
+ro.hardware.egl=mali
+ro.hardware.vulkan=mali
