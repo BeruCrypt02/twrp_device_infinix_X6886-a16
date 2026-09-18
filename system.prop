@@ -1,16 +1,20 @@
 # Fstab
 ro.postinstall.fstab.prefix=/system
 
+# Keystore / Keymaster
+fbe.metadata.wrappedkey=true
+
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
+# Charger suspend 
+ro.charger.enable_suspend=1
+
 # USB MTP
 ro.sys.usb.storage.type=mtp
-
-# Crypto - FBE
-ro.crypto.volume.filenames_mode=aes-256-cts
-
 # Gatekeeper (Trustonic)
 ro.hardware.gatekeeper=trustonic
 
 # TEE
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_trustonic_tee_support=1
-
