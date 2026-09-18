@@ -18,6 +18,3 @@ PRODUCT_BRAND := Infinix
 PRODUCT_MODEL := Infinix X6886
 PRODUCT_MANUFACTURER := INFINIX
 
-# Stock fingerprint (unit build 301450010 - keep in sync with flashed ROM)
-BUILD_FINGERPRINT := Infinix/X6886-OP/Infinix-X6886:16/BP2A.250605.031.A3/301450010:user/release-keys
-PRIVATE_BUILD_DESC := sys_mssi_64_64only_cn_armv82-user 16 BP2A.250605.031.A3 149082 release-keys
