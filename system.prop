@@ -14,11 +14,3 @@ ro.hardware.gatekeeper=trustonic
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_trustonic_tee_support=1
 
-# Keymaster
-keymaster_ver=4.1
-
-# Build
-ro.build.product=X6886
-ro.build.device=X6886
-ro.product.device=X6886
-
