@@ -1,0 +1,2 @@
+require board=mt6789
+require version-baseband=301400084

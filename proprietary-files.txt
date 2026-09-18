@@ -6,7 +6,6 @@
 # they are inventoried here for the future full vendor tree / ROM bringup.
 # Sections below are comments only - entry lines are extract-utils compatible.
 # Recovery ramdisk carries a SUBSET of these (see REPORT.md pull session).
-# Regenerate mapping with: python3 /tmp/sort_props.py (kept out of tree)
 
 # ===== TEE / Trustonic / Keymaster / Gatekeeper (58) =====
 vendor/bin/kmsetkey_ca.trustonic
