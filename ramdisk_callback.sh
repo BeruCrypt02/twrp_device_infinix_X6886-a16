@@ -1,6 +1,6 @@
-#!/system/bin/sh
+#!/bin/sh
 # ramdisk_callback.sh - Infinix X6886 (OrangeFox local callback)
-# Runs at build time: first with "<ramdisk> --first-call" (before the image),
+# Runs on the BUILD HOST (not on device): first with "<ramdisk> --first-call"
 # then with "<workdir> --last-call" (before the zip). Must be executable.
 #
 # Manual technique it supports (post-build, friend's tool): unpack the STOCK
