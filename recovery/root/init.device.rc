@@ -1,0 +1,35 @@
+# Device sysfs for recovery. Paths from A16 dump (AW8697 / backlight / flashlight).
+# chmod on missing nodes is ignored by init.
+
+on boot
+    # backlight — A16 uses /sys/class/backlight/backlight ; keep lcd-backlight too
+    chmod 0666 /sys/class/backlight/backlight/brightness
+    chmod 0666 /sys/class/leds/lcd-backlight/brightness
+    chmod 0644 /sys/class/backlight/backlight/max_brightness
+
+    # flashlight / torch (loaded via flashlight.ko if present)
+    chmod 0666 /sys/devices/virtual/torch/torch/torch_level
+    chmod 0666 /sys/devices/virtual/sub_torch/sub_torch/sub_torch_level
+    chmod 0666 /sys/devices/virtual/flashlight_core/flashlight/flashlight_torch
+    chmod 0666 /sys/class/leds/torch-light0/brightness
+    chmod 0666 /sys/class/leds/flashlight/brightness
+    chmod 0660 /dev/flashlight
+
+    # vibrator — A16 dump uses vibrator_single + AW8697, not A15 leds/vibrator
+    chmod 0666 /sys/class/leds/vibrator_single/brightness
+    chmod 0666 /sys/class/leds/vibrator_single/activate
+    chmod 0666 /sys/class/leds/vibrator/brightness
+    chmod 0666 /dev/aw8697_haptic
+    chmod 0666 /dev/aac_richtap_5f
+
+    # input
+    chmod 0666 /dev/input/event0
+    chmod 0666 /dev/input/event1
+    chmod 0666 /dev/input/event2
+    chmod 0666 /dev/input/event3
+    chmod 0666 /dev/touch
+    chmod 0666 /dev/goodix_fp
+
+    # thermal (read)
+    chmod 0444 /sys/class/thermal/thermal_zone53/temp
+    chmod 0444 /sys/devices/virtual/thermal/thermal_zone53/temp

@@ -1,0 +1,19 @@
+# Trustonic (Mobicore) TEE — generated from A16 dump
+# --sfs-reformat intentionally omitted (slow, not needed in recovery)
+# -r list is every .drbin that exists in vendor/app/mcRegistry
+
+service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry \
+    -r /vendor/app/mcRegistry/020f0000000000000000000000000000.drbin \
+    -r /vendor/app/mcRegistry/05070000000000000000000000000000.drbin \
+    -r /vendor/app/mcRegistry/050d0000000000000000000000000000.drbin \
+    -r /vendor/app/mcRegistry/05120000000000000000000000000001.drbin \
+    -r /vendor/app/mcRegistry/07150000000000000000000000000000.drbin \
+    -r /vendor/app/mcRegistry/07170000000000000000000000000000.drbin \
+    -r /vendor/app/mcRegistry/07210000000000000000000000000000.drbin \
+    -r /vendor/app/mcRegistry/08050000000000000000000000003419.drbin \
+    -r /vendor/app/mcRegistry/5020170115e016302017012521300000.drbin
+    class main
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0

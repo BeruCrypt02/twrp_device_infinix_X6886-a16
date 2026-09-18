@@ -1,0 +1,7 @@
+# persist for Trustonic SFS (fstype from dump fstab: ext4)
+
+on boot
+    mkdir /mnt/vendor/persist 0771 system system
+    wait /dev/block/by-name/persist
+    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+    mkdir /mnt/vendor/persist/mcRegistry 0771 system system

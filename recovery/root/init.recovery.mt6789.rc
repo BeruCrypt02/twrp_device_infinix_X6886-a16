@@ -1,0 +1,81 @@
+# Main recovery init for MT6789 / X6886 — generated from A16 dump
+# Recovery lives in vendor_boot (header v4). Do not use A15 HIDL names.
+
+import /init.tee.rc
+import /init.modules.rc
+import /init.device.rc
+import /init.recovery.usb.rc
+import /init.custom.rc
+import /init.vibrator.rc
+
+on init
+    setenforce 0
+    setprop sys.usb.configfs 1
+    setprop sys.usb.controller "musb-hdrc"
+    setprop sys.usb.ffs.aio_compat 0
+    export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw
+    setprop crypto.ready 0
+    start boot-hal-1-2
+
+on fs
+    wait /dev/block/platform/soc/11270000.ufshci
+    symlink /dev/block/platform/soc/11270000.ufshci /dev/block/bootdevice
+    install_keyring
+
+on boot
+    setprop sys.usb.config adb
+    start mtk.plpath.utils.link
+
+on post-fs-data
+    start health-hal-2-1
+
+on property:persist.vendor.mtk.pl_lnk=1
+    symlink /dev/block/mapper/pl_a /dev/block/by-name/preloader_raw_a
+    symlink /dev/block/mapper/pl_b /dev/block/by-name/preloader_raw_b
+    symlink /dev/block/mapper/pl_a /dev/block/platform/bootdevice/by-name/preloader_raw_a
+    symlink /dev/block/mapper/pl_b /dev/block/platform/bootdevice/by-name/preloader_raw_b
+    symlink /dev/block/by-name/lk1 /dev/block/by-name/bootloader1
+    symlink /dev/block/by-name/lk2 /dev/block/by-name/bootloader2
+
+service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
+    class main
+    user root
+    group root system
+    oneshot
+    disabled
+    seclabel u:r:recovery:s0
+
+service vendor.gatekeeper-default /vendor/bin/hw/android.hardware.gatekeeper-service.trustonic
+    class early_hal
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service vendor.keymint-trustonic /vendor/bin/hw/android.hardware.security.keymint@3.0-service.trustonic --rkp_version=v1
+    class early_hal
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+# Bring up Trustonic stack for FBE. Names match A16 dump (AIDL), not A15 HIDL.
+on property:ro.crypto.state=encrypted
+    start mobicore
+    start vendor.gatekeeper-default
+    start vendor.keymint-trustonic
+    setprop crypto.ready 1
+
+on property:ro.crypto.state=unencrypted
+    setprop crypto.ready 1
+
+on property:servicemanager.ready=true
+    setprop sys.boot_completed 1
+
+on property:twrp.action:format_data
+    exec u:r:recovery:s0 root root -- /system/bin/formatdata.sh
+    setprop twrp.action.done 1
+
+on property:sys.ofox.format=1
+    exec u:r:recovery:s0 root root -- /system/bin/formatdata.sh
+    setprop sys.ofox.format 0
