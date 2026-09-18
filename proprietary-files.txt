@@ -1,5 +1,9 @@
 # proprietary-files.txt - Infinix HOT 60 Pro+ (X6886, MT6789, A16)
 # Full vendor blob inventory from the stock A16 dump (branch a16).
+# NOTE: recovery needs only a small subset of this (TEE stack, keymaster NDK
+# libs, touch/wifi firmware, vintf, cgroups - the ~32 files already in
+# recovery/root). Camera/modem/audio sections below are NOT for recovery;
+# they are inventoried here for the future full vendor tree / ROM bringup.
 # Sections below are comments only - entry lines are extract-utils compatible.
 # Recovery ramdisk carries a SUBSET of these (see REPORT.md pull session).
 # Regenerate mapping with: python3 /tmp/sort_props.py (kept out of tree)
