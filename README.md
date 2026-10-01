@@ -9,12 +9,6 @@
 - Screen: 1080x2400 portrait_hdpi, 120Hz, punch-hole notch
 - Kernel: prebuilt dtb.img only. Don't ship kernel/blobs here.
 
-## Install
-
-Flash the OrangeFox zip from a working recovery, or swap the recovery
-ramdisk into the stock vendor_boot to keep the stock signature.
-Keep stock images around for unbrick.
-
 ## Build (fox_16.0 manifest) - vendor_boot image, NOT recovery image
 
 ./orangefox_sync.sh --branch 16.0 --path ~/fox_16.0
