@@ -15,9 +15,3 @@
 source build/envsetup.sh
 lunch twrp_X6886-bp2a-eng
 mka adbd vendorbootimage
-
-## Official checklist (outside tree)
-
-1. Unofficial build + XDA thread, 4 weeks community soak
-2. Full test suite with logs (flash stock+custom, backup/restore, OTG, themes)
-3. Apply for maintainership, Beta 14 days, then Stable via FoxBox
