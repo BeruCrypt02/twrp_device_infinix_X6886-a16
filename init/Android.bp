@@ -1,0 +1,14 @@
+cc_library_static {
+    name: "libinit_X6886",
+    header_libs: [
+        "libbase_headers",
+    ],
+    cflags: [
+        "-Wall",
+    ],
+    static_libs: [
+        "libbase",
+    ],
+    srcs: ["init_X6886.cpp"],
+    recovery_available: true,
+}
