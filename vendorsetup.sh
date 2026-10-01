@@ -1,10 +1,7 @@
 # vendorsetup.sh - Infinix HOT 60 Pro+ (X6886, MT6789, Android 16)
 # vendor_boot as recovery (header v4), Virtual A/B
 
-add_lunch_combo twrp_X6886-eng
-add_lunch_combo twrp_X6886-userdebug
 add_lunch_combo twrp_X6886-bp2a-eng
-add_lunch_combo twrp_X6886-bp2a-userdebug
 
 # Device must be set or the rest is ignored
 export FOX_BUILD_DEVICE=X6886
