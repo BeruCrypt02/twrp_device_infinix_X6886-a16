@@ -5,6 +5,8 @@ add_lunch_combo twrp_X6886-eng
 add_lunch_combo twrp_X6886-userdebug
 add_lunch_combo twrp_X6886-bp2a-eng
 add_lunch_combo twrp_X6886-bp2a-userdebug
+add_lunch_combo twrp_X6886-ap2a-eng
+add_lunch_combo twrp_X6886-ap2a-userdebug
 
 # Device must be set or the rest is ignored
 export FOX_BUILD_DEVICE=X6886
