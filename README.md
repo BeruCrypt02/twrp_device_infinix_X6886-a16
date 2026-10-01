@@ -7,11 +7,4 @@
 - Crypto: FBE v2 (fscrypt policy 2), Trustonic TEE via keymint 3.0 + gatekeeper,
   TWRP talks keymaster 4.1 API (forced via TW_FORCE_KEYMASTER_VER + system.prop)
 - Screen: 1080x2400 portrait_hdpi, 120Hz, punch-hole notch
-- Kernel: prebuilt dtb.img only. Don't ship kernel/blobs here.
-
-## Build (fox_16.0 manifest) - vendor_boot image
-
-./orangefox_sync.sh --branch 16.0 --path ~/fox_16.0
-source build/envsetup.sh
-lunch twrp_X6886-bp2a-eng
-mka adbd vendorbootimage
+- Kernel: prebuilt dtb.img only. Don't ship kernel/blobs here
