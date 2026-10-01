@@ -9,7 +9,7 @@
 - Screen: 1080x2400 portrait_hdpi, 120Hz, punch-hole notch
 - Kernel: prebuilt dtb.img only. Don't ship kernel/blobs here.
 
-## Build (fox_16.0 manifest) - vendor_boot image, NOT recovery image
+## Build (fox_16.0 manifest) - vendor_boot image
 
 ./orangefox_sync.sh --branch 16.0 --path ~/fox_16.0
 source build/envsetup.sh
