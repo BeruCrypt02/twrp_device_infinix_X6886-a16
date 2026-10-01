@@ -17,9 +17,6 @@ export FOX_VIRTUAL_AB_DEVICE=1
 # vendor_boot as recovery - keep stock images around for unbrick
 export FOX_VENDOR_BOOT_RECOVERY=1
 
-# stock ramdisk handling
-export FOX_LOCAL_CALLBACK_SCRIPT=device/infinix/X6886/ramdisk_callback.sh
-
 # keep it under 64MB (langs are EN+ID, see BoardConfig)
 export OF_USE_LZMA_COMPRESSION=1
 export FOX_REMOVE_AAPT=1

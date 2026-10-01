@@ -7,13 +7,13 @@
 - Crypto: FBE v2 (fscrypt policy 2), Trustonic TEE via keymint 3.0 + gatekeeper,
   TWRP talks keymaster 4.1 API (forced via TW_FORCE_KEYMASTER_VER + system.prop)
 - Screen: 1080x2400 portrait_hdpi, 120Hz, punch-hole notch
-- Kernel: prebuilt dtb.img only (P7-safe). NEVER ship kernel/blobs here.
+- Kernel: prebuilt dtb.img only. Don't ship kernel/blobs here.
 
-## P7 rule (Transsion anti-crack) - read first
+## Install
 
-NEVER flash unsigned vendor_boot/boot. Install path is ramdisk-swap only:
-unpack STOCK vendor_boot + OUR build, swap OUR recovery ramdisk into STOCK
-image (keeps stock signature), flash that. Keep stock images for unbrick.
+Flash the OrangeFox zip from a working recovery, or swap the recovery
+ramdisk into the stock vendor_boot to keep the stock signature.
+Keep stock images around for unbrick.
 
 ## Build (fox_16.0 manifest) - vendor_boot image, NOT recovery image
 
