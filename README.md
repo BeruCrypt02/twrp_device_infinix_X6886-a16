@@ -15,11 +15,11 @@ Flash the OrangeFox zip from a working recovery, or swap the recovery
 ramdisk into the stock vendor_boot to keep the stock signature.
 Keep stock images around for unbrick.
 
-## Build (fox_16.0 manifest) - vendor_boot image, NOT recovery image
+## Build (fox_14.1 manifest) - vendor_boot image, NOT recovery image
 
-./orangefox_sync.sh --branch 16.0 --path ~/fox_16.0
+./orangefox_sync.sh --branch 14.1 --path ~/fox_14.1
 source build/envsetup.sh
-lunch twrp_X6886-bp2a-eng
+lunch twrp_X6886-ap2a-eng
 mka adbd vendorbootimage
 
 ## Official checklist (outside tree)

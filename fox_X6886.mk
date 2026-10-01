@@ -42,7 +42,7 @@ OF_DEFAULT_KEYMASTER_VERSION := 4.1
 # fstab carries /metadata: silence metadata mount noise on ROMs without it
 OF_FBE_METADATA_MOUNT_IGNORE := 1
 
-# always keep verity/encryption handling (fox_16.0 default, explicit for record)
+# always keep verity/encryption handling
 OF_KEEP_DM_VERITY_FORCED_ENCRYPTION := 1
 OF_DONT_PATCH_ENCRYPTED_DEVICE := 1
 
