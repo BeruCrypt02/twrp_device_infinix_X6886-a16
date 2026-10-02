@@ -147,6 +147,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/init.recovery.usb.rc:recovery/root/init.recovery.usb.rc \
     $(LOCAL_PATH)/recovery/root/init.tee.rc:recovery/root/init.tee.rc \
     $(LOCAL_PATH)/recovery/root/init.custom.rc:recovery/root/init.custom.rc
-
-# --- Blob copy rules ---
--include $(LOCAL_PATH)/proprietary-files.mk
