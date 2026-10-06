@@ -48,4 +48,4 @@ lunch twrp_X6886-ap2a-eng && mka adbd vendorbootimage
     SPDX-License-Identifier: GPL-3.0-or-later
     Copyright (C) 2026 BeruCrypt02
 
-Full license text: https://www.gnu.org/licenses/gpl-3.0.html
+See LICENSE file.
