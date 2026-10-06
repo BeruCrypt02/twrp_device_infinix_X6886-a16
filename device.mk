@@ -16,6 +16,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 ENABLE_VIRTUAL_AB := true
+AB_OTA_UPDATER := true
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
