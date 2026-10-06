@@ -13,7 +13,7 @@ export FOX_VIRTUAL_AB_DEVICE=1
 export FOX_VENDOR_BOOT_RECOVERY=1
 
 # keep it under 64MB (langs are EN+ID, see BoardConfig)
-export OF_USE_LZMA_COMPRESSION=1
+# LZ4 matches stock ramdisk format (lz4_legacy)
 export FOX_REMOVE_AAPT=1
 export FOX_DELETE_AROMAFM=1
 export FOX_COMPRESS_EXECUTABLES=1
