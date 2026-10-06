@@ -35,8 +35,8 @@ OF_FL_PATH2 := /sys/devices/virtual/flashlight_core/flashlight/flashlight_torch
 # ADB/MTP stay on from boot
 OF_ADVANCED_SECURITY := 0
 
-# decrypt policy: normal password prompt (no skipping, no auto-decrypt)
-OF_SKIP_FBE_DECRYPTION := 0
+# TEST ONLY: skip decrypt to verify boot chain (revert to 0 after test)
+OF_SKIP_FBE_DECRYPTION := 1
 # default keymaster service version, matches stock
 OF_DEFAULT_KEYMASTER_VERSION := 4.1
 # fstab carries /metadata: silence metadata mount noise on ROMs without it
