@@ -7,8 +7,7 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_X6886.mk
 
-# ap2a = Android 14
-# Thanks to YF-Marco for telling me about building recovery
-
+# legacy 2-part lunch on fox_12.1
 COMMON_LUNCH_CHOICES := \
-    twrp_X6886-ap2a-eng
+    twrp_X6886-eng \
+    twrp_X6886-userdebug

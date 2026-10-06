@@ -5,7 +5,7 @@
 #
 
 # device.mk - Infinix HOT 60 Pro+ (X6886, MT6789, Android 16)
-# vendor_boot as recovery (header v4), built on fox_14.1
+# vendor_boot as recovery (header v4), built on fox_12.1
 
 LOCAL_PATH := device/infinix/X6886
 
@@ -19,8 +19,8 @@ ENABLE_VIRTUAL_AB := true
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_SHIPPING_API_LEVEL := 34
-PRODUCT_TARGET_VNDK_VERSION := 34
+PRODUCT_SHIPPING_API_LEVEL := 32
+PRODUCT_TARGET_VNDK_VERSION := 32
 
 # AB OTA partitions (Virtual A/B with vendor ramdisk)
 AB_OTA_PARTITIONS += \

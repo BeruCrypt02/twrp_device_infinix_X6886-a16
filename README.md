@@ -34,7 +34,7 @@ First boot testing in progress:
 Full guide: https://wiki.orangefox.tech/en/dev/building
 
 ```
-lunch twrp_X6886-ap2a-eng && mka adbd vendorbootimage
+lunch twrp_X6886-eng && mka adbd vendorbootimage
 ```
 
 ## Credits
