@@ -124,10 +124,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/vendor/app/mcRegistry:vendor/app/mcRegistry
 
-# --- vintf manifests ---
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/system/etc/vintf/manifest.xml:system/etc/vintf/manifest.xml \
-    $(LOCAL_PATH)/recovery/root/vendor/etc/vintf/manifest.xml:vendor/etc/vintf/manifest.xml
+# --- vintf manifests ship inside recovery/root overlay, no copy rules needed ---
 
 # --- fstab from stock dump ---
 PRODUCT_COPY_FILES += \
