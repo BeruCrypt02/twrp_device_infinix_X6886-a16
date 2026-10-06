@@ -17,7 +17,7 @@ Recovery                | vendor_boot as recovery (header v4)
 
 ## Features
 
-First boot testing in progress:
+First boot testing in progress (live tracker: issue #1):
 
 - [ ] ADB
 - [ ] Decryption
