@@ -131,10 +131,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/first_stage_ramdisk/fstab.emmc:recovery/root/first_stage_ramdisk/fstab.emmc \
     $(LOCAL_PATH)/recovery/root/first_stage_ramdisk/fstab.mt6789:recovery/root/first_stage_ramdisk/fstab.mt6789
 
-# --- ueventd ---
+# --- ueventd (device-specific one goes to recovery ramdisk only,
+# the system copy would clash with the default) ---
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/ueventd.mt6789.rc:recovery/root/ueventd.mt6789.rc \
-    $(LOCAL_PATH)/recovery/root/system/etc/ueventd.rc:system/etc/ueventd.rc
+    $(LOCAL_PATH)/recovery/root/ueventd.mt6789.rc:recovery/root/ueventd.mt6789.rc
 
 # --- init rc files ---
 PRODUCT_COPY_FILES += \
