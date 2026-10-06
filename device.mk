@@ -133,8 +133,9 @@ PRODUCT_COPY_FILES += \
 
 # --- ueventd ---
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/ueventd.mt6789.rc:recovery/root/ueventd.mt6789.rc \
-    $(LOCAL_PATH)/recovery/root/system/etc/ueventd.rc:system/etc/ueventd.rc
+# --- ueventd (device-specific one goes to recovery ramdisk only,
+# the system copy would clash with the default) ---
+    $(LOCAL_PATH)/recovery/root/ueventd.mt6789.rc:recovery/root/ueventd.mt6789.rc
 
 # --- init rc files ---
 PRODUCT_COPY_FILES += \
