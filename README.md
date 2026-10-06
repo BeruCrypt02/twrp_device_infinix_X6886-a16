@@ -45,5 +45,10 @@ lunch twrp_X6886-bp2a-eng && mka adbd vendorbootimage
 
 ## License
 
-Copyright (C) 2026 BeruCrypt02. Licensed under GPL-3.0-or-later.
-Full text: https://www.gnu.org/licenses/gpl-3.0.html
+    SPDX-License-Identifier: GPL-3.0-or-later
+    Copyright (C) 2026 BeruCrypt02
+
+This tree ships no proprietary blobs. All binaries come from the stock dump
+and stay property of their respective owners.
+
+Full license text: https://www.gnu.org/licenses/gpl-3.0.html
