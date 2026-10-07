@@ -114,16 +114,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/system/bin/load_modules.sh:recovery/root/system/bin/load_modules.sh
 
 # --- Kernel modules (from stock dump) ---
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/lib/modules:recovery/root/lib/modules
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root/lib/modules,recovery/root/lib/modules)
 
 # --- Touch / WiFi / BT firmware ---
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/vendor/firmware:vendor/firmware
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root/vendor/firmware,vendor/firmware)
 
 # --- Trustonic TEE registry ---
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/vendor/app/mcRegistry:vendor/app/mcRegistry
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root/vendor/app/mcRegistry,vendor/app/mcRegistry)
 
 # --- vintf manifests ship inside recovery/root overlay, no copy rules needed ---
 
