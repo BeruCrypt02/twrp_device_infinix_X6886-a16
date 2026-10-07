@@ -2,7 +2,6 @@
 # Recovery lives in vendor_boot (header v4). Do not use A15 HIDL names.
 
 import /init.tee.rc
-import /init.modules.rc
 import /init.device.rc
 import /init.recovery.usb.rc
 import /init.custom.rc
