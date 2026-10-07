@@ -110,8 +110,7 @@ PRODUCT_PACKAGES += \
 
 # --- scripts (triggers live inside init rc files) ---
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/system/bin/formatdata.sh:recovery/root/system/bin/formatdata.sh \
-    $(LOCAL_PATH)/recovery/root/system/bin/load_modules.sh:recovery/root/system/bin/load_modules.sh
+    $(LOCAL_PATH)/recovery/root/system/bin/formatdata.sh:recovery/root/system/bin/formatdata.sh
 
 # --- Kernel modules (from stock dump) ---
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root/lib/modules,recovery/root/lib/modules)
@@ -137,7 +136,6 @@ PRODUCT_COPY_FILES += \
 
 # --- init rc files ---
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/init.modules.rc:recovery/root/init.modules.rc \
     $(LOCAL_PATH)/recovery/root/init.device.rc:recovery/root/init.device.rc \
     $(LOCAL_PATH)/recovery/root/init.vibrator.rc:recovery/root/init.vibrator.rc \
     $(LOCAL_PATH)/recovery/root/init.recovery.mt6789.rc:recovery/root/init.recovery.mt6789.rc \
