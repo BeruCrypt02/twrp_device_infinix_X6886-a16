@@ -110,7 +110,8 @@ PRODUCT_PACKAGES += \
 
 # --- formatdata.sh (script only - trigger is inside init.recovery.mt6789.rc) ---
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/system/bin/formatdata.sh:recovery/root/system/bin/formatdata.sh
+    $(LOCAL_PATH)/recovery/root/system/bin/formatdata.sh:recovery/root/system/bin/formatdata.sh \
+    $(LOCAL_PATH)/recovery/root/system/bin/load_modules.sh:recovery/root/system/bin/load_modules.sh
 
 # --- Kernel modules (from stock dump) ---
 PRODUCT_COPY_FILES += \
