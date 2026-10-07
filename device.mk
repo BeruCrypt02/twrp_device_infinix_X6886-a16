@@ -108,9 +108,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libinit_X6886
 
-# --- formatdata.sh (script only - trigger is inside init.recovery.mt6789.rc) ---
+# --- scripts (triggers live inside init rc files) ---
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/system/bin/formatdata.sh:recovery/root/system/bin/formatdata.sh
+    $(LOCAL_PATH)/recovery/root/system/bin/formatdata.sh:recovery/root/system/bin/formatdata.sh \
+    $(LOCAL_PATH)/recovery/root/system/bin/load_modules.sh:recovery/root/system/bin/load_modules.sh
 
 # --- Kernel modules (from stock dump) ---
 PRODUCT_COPY_FILES += \
